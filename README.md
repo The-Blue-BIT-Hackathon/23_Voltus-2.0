@@ -17,6 +17,6 @@ These instructions will get you a copy of the project up and running on your loc
 You will need to have Eclipse IDE, Oracle 10g Express Edition, Apache Tomcat v8.5 and Git Bash installed on your machine.
 You can download them from the official website:
 
-[Eclipse IDE] (https://www.eclipse.org/downloads/)
-[Oracle 10g Express Edition] (https://www.oracle.com/in/database/technologies/oracle-database-software-downloads.html)
-[Apache Tomcat v8.5] (https://tomcat.apache.org/download-80.cgi)
+[Eclipse IDE](https://www.eclipse.org/downloads/)
+[Oracle 10g Express Edition](https://www.oracle.com/in/database/technologies/oracle-database-software-downloads.html)
+[Apache Tomcat v8.5](https://tomcat.apache.org/download-80.cgi)

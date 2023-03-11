@@ -173,34 +173,34 @@ if (u == null) {
 
 
 	<main id="main" class="main">
-<%
-	try {
-		boolean msg = (boolean) session.getAttribute("not-shortlisted");
-		if (msg == false) {
-	%>
-	<div class="toast-container"
-		style="position: absolute; top: 10px; right: 10px;">
-		<div class="toast fade show">
-			<div class="toast-header bg-success text-white">
-				<strong class="me-auto"><i class="bi-globe"></i> Error!</strong> <small>just
-					now</small>
-				<button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-			</div>
-			<div class="toast-body">
-				<h5>
-					<b> Your resume is not yet been shotlisted  </b>
-				</h5>
+		<%
+		try {
+			boolean msg = (boolean) session.getAttribute("not-shortlisted");
+			if (msg == false) {
+		%>
+		<div class="toast-container"
+			style="position: absolute; top: 10px; right: 10px;">
+			<div class="toast fade show">
+				<div class="toast-header bg-success text-white">
+					<strong class="me-auto"><i class="bi-globe"></i> Error!</strong> <small>just
+						now</small>
+					<button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+				</div>
+				<div class="toast-body">
+					<h5>
+						<b> Your resume is not yet been shotlisted </b>
+					</h5>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<%
-	}
-	} catch (Exception e) {
+		<%
+		}
+		} catch (Exception e) {
 
-	}
-	session.removeAttribute("not-shortlisted");
-	%>
+		}
+		session.removeAttribute("not-shortlisted");
+		%>
 
 		<div class="pagetitle">
 			<h1>Applied Candidates</h1>
@@ -259,68 +259,72 @@ if (u == null) {
 					<td><button type="button" class="btn btn-primary"
 							data-bs-toggle="modal" data-bs-target="#largeModal">
 							Track</button></td>
-							
-							<div class="modal fade" id="largeModal" tabindex="-1">
-			<div class="modal-dialog modal-dialog-centered modal-lg" >
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Application Status</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
 
-						<div id="steps">
-							<div class="step active" data-desc="Application Submitted">1</div>
-							<%
-							if(rs.getString(8).equals("Yes")){
-								%>
-								<div class="step active " data-desc="Resume Shortlisted">2</div>
-								<% 
-							}else{
-								%>
-								<div class="step" data-desc="Resume Shortlisted">2</div>
-								<% 
-							}
-							%>
-							<%
-							if(rs.getString(10).equals("Yes")){
-								%>
-								<div class="step active" data-desc="Aptitude Passed">3</div>
-								<% 
-							}else{
-								%>
-								<div class="step " data-desc="Aptitude Passed">3</div>
-								<% 
-							}
-							%>
-							<%
-							if(rs.getString(11).equals("Yes")){
-								%>
-								<div class="step acrive " data-desc="Interview Call">4</div>
-								<% 
-							}else{
-								%>
-								<div class="step  " data-desc="Interview Call">4</div>
-								<% 
-							}
-							%>
-							
-							
-							
-						</div>
 
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary"
-							data-bs-dismiss="modal">Close</button>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-		
+
 				</tr>
+									<div class="modal fade" id="largeModal" tabindex="-1">
+						<div class="modal-dialog modal-dialog-centered modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Application Status</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+
+									<div id="steps">
+										<div class="step active" data-desc="Application Submitted">1</div>
+										<%
+										if (rs.getString(8).equals("Yes")&&rs.getString(10).equals("Yes")&&rs.getString(11).equals("Yes")) {
+										%>
+										<div class="step active" data-desc="Resume Shortlisted">2</div>
+										<div class="step active" data-desc="Aptitude Passed">3</div>
+										<div class="step active" data-desc="Interview Call">4</div>
+										
+										<%
+										} else {
+										%>
+										<div class="step" data-desc="Resume Shortlisted">2</div>
+										<%
+										}
+										%>
+										<%
+										if (rs.getString(10).equals("Yes")) {
+										%>
+										<div class="step active" data-desc="Aptitude Passed">3</div>
+										<%
+										} else {
+										%>
+										<div class="step " data-desc="Aptitude Passed">3</div>
+										<%
+										}
+										%>
+										<%
+										if (rs.getString(11).equals("Yes")) {
+										%>
+										<div class="step active " data-desc="Interview Call">4</div>
+										<%
+										} else {
+										%>
+										<div class="step  " data-desc="Interview Call">4</div>
+										<%
+										}
+										%>
+
+</div>
+
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
 				<%
 				i++;
 				}
@@ -342,7 +346,7 @@ if (u == null) {
 				</tr>
 			</tfoot>
 		</table>
-		
+
 		<!-- End Vertically centered Modal-->
 
 	</main>

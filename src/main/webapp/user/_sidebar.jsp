@@ -66,7 +66,12 @@
           <span>Take Aptitude</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
-      
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="learning-resources.jsp">
+          <i class="bi bi-file-earmark-code"></i>
+          <span>Learning Resources</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="skill-assesment.jsp">
           <i class="bi bi-file-earmark-code"></i>

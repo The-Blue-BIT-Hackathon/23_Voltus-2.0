@@ -3,7 +3,7 @@
 <%@page import="com.job.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@page errorPage="404.jsp" %>
      <%
 ServletContext sc1 = request.getServletContext();
 User u = (User) sc1.getAttribute("user-login-success-context");

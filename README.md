@@ -68,5 +68,5 @@ locations. Users will be able to search and filter job listings based on their p
 location, and salary range.<br><br>
 #️⃣`2. Application Tracking`: Users will be able to see which jobs they have applied for, the status of each application, and
 receive reminders on follow-up tasks. <br><br>
-#️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews
+#️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews.
 

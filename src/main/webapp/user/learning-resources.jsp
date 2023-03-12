@@ -91,6 +91,9 @@ $(document).ready(function(){
                   <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab" data-bs-target="#bordered-justified-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Udemy Courses</button>
                 </li>
                 <li class="nav-item flex-fill" role="presentation">
+                  <button class="nav-link w-100" id="strategy-tab" data-bs-toggle="tab" data-bs-target="#bordered-justified-strategy" type="button" role="tab" aria-controls="profile" aria-selected="false">Job Search Strategy</button>
+                </li>
+                <li class="nav-item flex-fill" role="presentation">
                   <button class="nav-link w-100" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bordered-justified-que" type="button" role="tab" aria-controls="que" aria-selected="false">Frequently Asked Questions</button>
                 </li>
               </ul>
@@ -342,6 +345,7 @@ CodeHelp - by Babbar
                   
                   
                   </div>
+                  
                 <div class="tab-pane fade" id="bordered-justified-profile" role="tabpanel" aria-labelledby="profile-tab">
                 
                 
@@ -400,6 +404,85 @@ CodeHelp - by Babbar
 		          	</div>
           		</div><!-- End Card with an image on top -->
            
+                 
+                </div>
+                </div>
+                
+                
+                
+  <div class="tab-pane fade" id="bordered-justified-strategy" role="tabpanel" aria-labelledby="strategy-tab">
+                
+                
+                 <div class="row mt-2">
+                <div class="card col-md-3">
+            <img src="../assets/img/resource/job1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Anshika Gupta</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Off Campus Placement strategy (REAL EXAMPLE)</h6>
+              
+           <!-- <p class="card-text">Full tutorial on Data structure</p> -->
+        	   <a href="https://www.youtube.com/watch?v=2aHnI2171l0" class="card-link">Watch Now</a>
+          </div>
+          </div><!-- End Card with an image on top -->
+          
+          <div class="card offset-1 col-md-3">
+            <img src="../assets/img/resource/job2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Code With Harry</h5>
+		<h6 class="card-subtitle mb-2 text-muted">How to get highest package in college?</h6>
+             <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        	 -->    <a href="https://www.youtube.com/watch?v=5nbjgV4-sq4" class="card-link">Watch Now</a>
+          </div>
+          </div><!-- End Card with an image on top -->
+          
+          <div class="card offset-1 col-md-3">
+            <img src="../assets/img/resource/job3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+Professor Heather Austin
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted">MASTER Your Job Search</h6>
+             <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        	 -->    <a href="https://www.youtube.com/watch?v=h_04pmxmHQc" class="card-link">Watch Now</a>
+          </div>
+          </div><!-- End Card with an image on top -->
+          
+          
+          
+          <div class="card col-md-3">
+            <img src="../assets/img/resource/job4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Anuj Bhaiya</h5>
+              <h6 class="card-subtitle mb-2 text-muted">How to make linkedin profile better | Referrals | Profile Building | Jobs search [2023]</h6>
+             <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        	 -->    <a href="https://www.youtube.com/watch?v=I17XCak_Suc" class="card-link">Watch Now</a>
+          </div>
+          </div><!-- End Card with an image on top -->
+          
+          <div class="card offset-1 col-md-3">
+            <img src="../assets/img/resource/job5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+Badass Careers</h5>
+               <h6 class="card-subtitle mb-2 text-muted">Modern Job Search Tips & Mistakes to Avoid When Job Hunting 🔎</h6>             
+             <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        	 -->    <a href="https://www.youtube.com/watch?v=ZUZfo4VfW7A" class="card-link">Watch Now</a>
+          </div>
+          </div><!-- End Card with an image on top -->
+          
+          
+          <div class="card offset-1 col-md-3">
+            <img src="../assets/img/resource/job6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+TEDx Talks
+</h5>
+               <h6 class="card-subtitle mb-2 text-muted">Off Campus Placement strategy (REAL EXAMPLE)</h6>
+             <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        	 -->    <a href=https://www.youtube.com/watch?v=tVKfJ6z4fYg class="card-link">Watch Now</a>
+          </div>
+          </div><!-- End Card with an image on top -->
+          
                  
                 </div>
                 </div>
@@ -479,10 +562,7 @@ CodeHelp - by Babbar
                     </div>
                   </div>
                 </div>
-                
-                
-                
-                
+
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingSix">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">

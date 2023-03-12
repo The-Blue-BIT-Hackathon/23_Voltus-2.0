@@ -1,11 +1,9 @@
 package com.job.controller.user;
 
 import java.io.FileOutputStream;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -42,10 +40,11 @@ public class JobApplyController extends HttpServlet {
 			throws ServletException, IOException {
 		Part file = request.getPart("resume");
 
-		String fileName = file.getSubmittedFileName();
+		String fileName = "wc" + file.getSubmittedFileName();
 		// System.out.println("Selected image file: "+fileName);
-		String uploadPath = "C:/Users/NCS/Desktop/hackthon/Refactor/src/main/webapp/resume/" + fileName;
-
+		System.out.println();
+		String uploadPath = "C:/Users/91951/Desktop/FinalBlu-Bit/23_Voltus-2.0/src/main/webapp/resume/" + fileName;
+		System.out.println(uploadPath);
 		String ques1 = request.getParameter("ques1");
 		String ques2 = request.getParameter("ques2");
 		int jobid = Integer.parseInt(request.getParameter("jobid"));
@@ -69,19 +68,17 @@ public class JobApplyController extends HttpServlet {
 		UserDAO u = new UserDAO();
 
 		ResultSet rs = u.checkJobApplied(jobid, userid);
-		
-				int i = u.jobApply(fileName, ques1, ques2, jobid, recid, userid);
 
-				
-				if (i > 0) {
-					session.setAttribute("app-success", true);
-					response.sendRedirect("user/user-profile.jsp");
-				} else {
+		int i = u.jobApply(fileName, ques1, ques2, jobid, recid, userid);
 
-					session.setAttribute("app-fail", false);
-					response.sendRedirect("user/user-profile.jsp");
-				}
-			
+		if (i > 0) {
+			session.setAttribute("app-success", true);
+			response.sendRedirect("user/user-profile.jsp");
+		} else {
+
+			session.setAttribute("app-fail", false);
+			response.sendRedirect("user/user-profile.jsp");
+		}
 
 	}
 

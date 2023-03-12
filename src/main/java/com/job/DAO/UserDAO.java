@@ -339,7 +339,7 @@ public class UserDAO {
 		return i;
 
 	}
-	
+
 	public ResultSet getAllJobs() {
 		con = DBConnection.getConnection();
 		ResultSet rs = null;
@@ -352,7 +352,7 @@ public class UserDAO {
 		}
 		return rs;
 	}
-	
+
 	public ResultSet getAllNonItJobs() {
 		con = DBConnection.getConnection();
 		ResultSet rs = null;
@@ -365,6 +365,7 @@ public class UserDAO {
 		}
 		return rs;
 	}
+
 	public ResultSet getCompanyNameById(int id) {
 		con = DBConnection.getConnection();
 		ResultSet rs = null;
@@ -378,6 +379,7 @@ public class UserDAO {
 		}
 		return rs;
 	}
+
 	public ResultSet getJobDetailsByJobId(int id) {
 
 		ResultSet rs = null;
@@ -393,7 +395,8 @@ public class UserDAO {
 		}
 		return rs;
 	}
-	public ResultSet getJobDetailsByJobIdandUser(int id,int user) {
+
+	public ResultSet getJobDetailsByJobIdandUser(int id, int user) {
 
 		ResultSet rs = null;
 		con = DBConnection.getConnection();
@@ -442,13 +445,13 @@ public class UserDAO {
 			ps.setString(5, ques1);
 			ps.setString(6, ques2);
 			ps.setTimestamp(7, date);
-			
 
 			i = ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		return i;
 	}
 
@@ -468,12 +471,11 @@ public class UserDAO {
 		}
 		return rs;
 
-		
 	}
-	
-	public ResultSet filterByTypeAndLocation(String type,String location,String company) {
-		
-		ResultSet rs=null;
+
+	public ResultSet filterByTypeAndLocation(String type, String location, String company) {
+
+		ResultSet rs = null;
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement("select * from job_post where jo_type=? and job_location=? and company_name=?");
@@ -486,9 +488,10 @@ public class UserDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return rs;
 	}
+
 	public ResultSet getAllCandidatesById(int id) {
 
 		ResultSet rs = null;
@@ -506,7 +509,8 @@ public class UserDAO {
 		return rs;
 
 	}
-	public ResultSet getJobIdByRecIdAndUserId(int userid,int recid) {
+
+	public ResultSet getJobIdByRecIdAndUserId(int userid, int recid) {
 
 		ResultSet rs = null;
 
@@ -524,6 +528,7 @@ public class UserDAO {
 		return rs;
 
 	}
+
 	public ResultSet getAllCandidatesByUserId(int id) {
 
 		ResultSet rs = null;
@@ -541,15 +546,16 @@ public class UserDAO {
 		return rs;
 
 	}
-	public int updateShortlistResumeStatus(int userid,int jobid) {
-		int i=0;
+
+	public int updateShortlistResumeStatus(int userid, int jobid) {
+		int i = 0;
 
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement("update job_apply set resume_status='Yes' where user_id=? and app_id=?");
 			ps.setInt(1, userid);
 			ps.setInt(2, jobid);
-			 i = ps.executeUpdate();
+			i = ps.executeUpdate();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -557,34 +563,34 @@ public class UserDAO {
 		}
 		return i;
 
-		
 	}
-	public int updateShortlistAptiStatus( int userid,int appid) {
-		int i=0;
+
+	public int updateShortlistAptiStatus(int userid, int appid) {
+		int i = 0;
 
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement("update job_apply set apti_status='Yes' where user_id=? and app_id=?");
 			ps.setInt(1, userid);
-			ps.setInt(2,appid);		
-			 i = ps.executeUpdate();
+			ps.setInt(2, appid);
+			i = ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return i;
 
-		
 	}
-	public int updateShortlistInterviewStatus( int userid,int appid) {
-		int i=0;
+
+	public int updateShortlistInterviewStatus(int userid, int appid) {
+		int i = 0;
 
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement("update job_apply set interview_status='Yes' where user_id=? and app_id=?");
 			ps.setInt(1, userid);
-			ps.setInt(2,appid);	
-			 i = ps.executeUpdate();
+			ps.setInt(2, appid);
+			i = ps.executeUpdate();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -592,17 +598,18 @@ public class UserDAO {
 		}
 		return i;
 
-		
 	}
-	public int updateShortlistRejectStatus( int userid,int appid) {
+
+	public int updateShortlistRejectStatus(int userid, int appid) {
 		int i = 0;
 
 		con = DBConnection.getConnection();
 		try {
-			ps = con.prepareStatement("update job_apply set resume_status='No', apti_status='No',interview_status='No' where user_id=? and app_id=?");
+			ps = con.prepareStatement(
+					"update job_apply set resume_status='No', apti_status='No',interview_status='No' where user_id=? and app_id=?");
 			ps.setInt(1, userid);
-			ps.setInt(2,appid);	
-			 i = ps.executeUpdate();
+			ps.setInt(2, appid);
+			i = ps.executeUpdate();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -610,12 +617,11 @@ public class UserDAO {
 		}
 		return i;
 
-		
 	}
 
 	public int updateAptiScore(int score, int userid, int job) {
 		// TODO Auto-generated method stub
-		int i=0;
+		int i = 0;
 
 		con = DBConnection.getConnection();
 		try {
@@ -623,15 +629,50 @@ public class UserDAO {
 			ps.setInt(1, score);
 			ps.setInt(2, userid);
 			ps.setInt(3, job);
-			
-			 i = ps.executeUpdate();
+
+			i = ps.executeUpdate();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return i;
-		
+
+	}
+
+	public ResultSet getSkillByUserId(int id) {
+
+		ResultSet rs = null;
+
+		con = DBConnection.getConnection();
+		try {
+			ps = con.prepareStatement("select skills from user_resume where user_id=?");
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+
+	}
+
+	public ResultSet getResumeFileNameByUserId(int id) {
+
+		ResultSet rs = null;
+
+		con = DBConnection.getConnection();
+		try {
+			ps = con.prepareStatement("select resume_pdf from job_apply where user_id=?");
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
 	}
 
 }

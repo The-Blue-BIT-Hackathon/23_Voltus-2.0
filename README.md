@@ -35,8 +35,22 @@ You can download them from the official website:
 5. Change Database username & password in DBConnection.java file at "23_Voltus-2.0\src\main\java\com\job\DAO\DBConnection.java" <br><br>
 	`jdbc:oracle:thin:@localhost:1521:xe", "your_username", "your_password`
 6. Add Apache Tomcat Server into Eclipse IDE <br><br>
-	Extract the zip file downloaded from Tomcat's official website.
+	Extract the zip file downloaded from Tomcat's official website.<br>
 	`Go to Eclipse IDE > Windows > Show View > Servers > Create new server > Select Apache and its Tomcat version > Click next > Browse Tomcat installation directory > Select path as C:\Program Files\Apache Software Foundation\bin > Click Finish` <br>
 7. ADD Apache Tomcat Server to your project <br><br>
 	`Right click on project name > Properties > Server > Select existing Tomcat Server v8.5 > Click Apply & close`
 	
+8. Open index.jsp from \src\main\webapp\index.jsp <br><br>
+	`Right click on index.jsp > Run as > 1 Run on Server > Select Existing Server > Tomcat v8.5 Server > Click Finish` <br>
+	After finishing server startup, our webpage will get loaded into default web browser <br>
+## 🟡Built with
+
+1. Frontend:  HTML, CSS, JavaScript, Bootstrap and JQuery. 
+
+2. Backend: Java Server Pages (JSP)
+
+3. Database: Oracle 10g Express Edition
+
+4. Code editor: Eclipse IDE 2022-12 EE
+
+5. Designing tool: Figma

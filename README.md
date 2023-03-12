@@ -61,3 +61,12 @@ You can download them from the official website:
 ➡️`1. User Module`: WorkConnect provides every individual a dashboard with many functionalities included. The person can search for a a job, apply for one, create customized resume and many more. <br>
 ➡️`2. Admin Module`: WorkConnect provides an admin  dashboard which helps an admin to manage  the main two bodies that is users and recruiters and also it provides a space to post a non IT jobs.<br>
 ➡️`3. Recruiter Module`: WorkConnect provides every recruiter a dashboard with rich features like posting a job, checking the applications, shortlisting the candidates and other. 
+
+## 🟡Features
+#️⃣`1. Job Listing`: The platform will offer a comprehensive list of job openings in various industries and
+locations. Users will be able to search and filter job listings based on their preferred job title,
+location, and salary range.<br><br>
+#️⃣`2. Application Tracking`: Users will be able to see which jobs they have applied for, the status of each application, and
+receive reminders on follow-up tasks. <br><br>
+#️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews
+

@@ -39,8 +39,9 @@ You can download them from the official website:
 	`Go to Eclipse IDE > Windows > Show View > Servers > Create new server > Select Apache and its Tomcat version > Click next > Browse Tomcat installation directory > Select path as C:\Program Files\Apache Software Foundation\bin > Click Finish` <br>
 7. ADD Apache Tomcat Server to your project <br><br>
 	`Right click on project name > Properties > Server > Select existing Tomcat Server v8.5 > Click Apply & close`
-	
-8. Open index.jsp from \src\main\webapp\index.jsp <br><br>
+8. Run all the Database queries into Oracle DB <br><br>
+	`Go to db.sql file > Create tables in Oracle > Just copy paste those queries > Create sequences > trigger the tables`<br>
+9. Open index.jsp from \src\main\webapp\index.jsp <br><br>
 	`Right click on index.jsp > Run as > 1 Run on Server > Select Existing Server > Tomcat v8.5 Server > Click Finish` <br>
 	After finishing server startup, our webpage will get loaded into default web browser and then you can start evaluating our project. <br>
 ## 🟡Built with

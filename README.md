@@ -34,4 +34,9 @@ You can download them from the official website:
 	`Right click on project name > Properties > Java Build Path > Libraries > Add External JARs > Attach Ojdbc14.jar file from the oracleexe folder at C Drive > Click Apply & Close` <br>
 5. Change Database username & password in DBConnection.java file at "23_Voltus-2.0\src\main\java\com\job\DAO\DBConnection.java" <br><br>
 	`jdbc:oracle:thin:@localhost:1521:xe", "your_username", "your_password`
-6. Add Apache Tomcat Server to your project <br><br>
+6. Add Apache Tomcat Server into Eclipse IDE <br><br>
+	Extract the zip file downloaded from Tomcat's official website.
+	`Go to Eclipse IDE > Windows > Show View > Servers > Create new server > Select Apache and its Tomcat version > Click next > Browse Tomcat installation directory > Select path as C:\Program Files\Apache Software Foundation\bin > Click Finish` <br>
+7. ADD Apache Tomcat Server to your project <br><br>
+	`Right click on project name > Properties > Server > Select existing Tomcat Server v8.5 > Click Apply & close`
+	

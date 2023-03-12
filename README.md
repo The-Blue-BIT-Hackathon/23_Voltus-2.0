@@ -1,4 +1,4 @@
-# 23_Voltus-2.0
+# WorkConnect
 
 A project to tackle unemployment. Built under 24 hours in The-Blue-BIT Hackathon '23. By Team Voltus 2.0.
 
@@ -42,7 +42,7 @@ You can download them from the official website:
 	
 8. Open index.jsp from \src\main\webapp\index.jsp <br><br>
 	`Right click on index.jsp > Run as > 1 Run on Server > Select Existing Server > Tomcat v8.5 Server > Click Finish` <br>
-	After finishing server startup, our webpage will get loaded into default web browser <br>
+	After finishing server startup, our webpage will get loaded into default web browser and then you can start evaluating our project. <br>
 ## 🟡Built with
 
 1. Frontend:  HTML, CSS, JavaScript, Bootstrap and JQuery. 

@@ -53,11 +53,11 @@ You can download them from the official website:
 
 1. Frontend:  HTML, CSS, JavaScript, Bootstrap and JQuery. 
 
-2. Backend: Java Server Pages (JSP)
+2. Backend: Java Server Pages (JSP),Web Servlets
 
 3. Database: Oracle 10g Express Edition
 
-4. Code editor: Eclipse IDE 2022-12 EE
+4. Code editor: Eclipse IDE 2022-12 EE , Tomcat Server
 
 5. Designing tool: Figma
 
@@ -75,5 +75,16 @@ location, and salary range. Both IT and Non IT jobs are listed based on the skil
 receive reminders on follow-up tasks. <br><br>
 #️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews.<br><br>
 #️⃣`4. Expert Advice or Guidance`: Users will be able to interact with the experts verified by workconnect. Different purchase plans are also available for users. User can get in touch with the expert via chat or meeting call. <br><br>
+
+## 🟡Main Features
+- Responsive Web Design
+- Professional Resume Builder
+- Application Tracking
+- Interview Preparation
+- Filters Jobs by location , salary , job type
+- Job Post Alert/Notification Through Email
+- Email Verification
+- Mock Aptitude Tests
+- Screening Exam With Audio and video AI proctoring
 
 

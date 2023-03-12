@@ -489,6 +489,24 @@ public class UserDAO {
 		
 		return rs;
 	}
+public ResultSet filterBySalary(String s,String d) {
+		
+		ResultSet rs=null;
+		con = DBConnection.getConnection();
+		try {
+			ps = con.prepareStatement("select * from job_post where salary between ? and ?");
+			ps.setString(1, s);
+			ps.setString(2, d);
+			
+			rs = ps.executeQuery();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return rs;
+	}
 	public ResultSet getAllCandidatesById(int id) {
 
 		ResultSet rs = null;

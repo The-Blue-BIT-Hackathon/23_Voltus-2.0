@@ -107,7 +107,7 @@
 
 
 						<label class="col-sm-1 col-form-label">Location</label>
-						<div class="col-sm-2">
+						<div class="col-sm-1">
 							<select class="form-select" aria-label="Default select example"
 								name="location">
 								<option selected>Select</option>
@@ -142,8 +142,22 @@
 								%>
 							</select>
 						</div>
+						
+						<label class="col-sm-1 col-form-label">Salary</label>
 
 						<div class="col-sm-2">
+							<select class="form-select" aria-label="Default select example"
+								name="salary">
+								<option selected>Select</option>
+								<option value="5k-10k">5k-10k</option>
+								<option value="10k-40k">10k-40k</option>
+								<option value="40k-60k">40k-60k</option>
+								<option value="60k-100k">60k-100k</option>
+								
+							</select>
+						</div>
+
+						<div class="col-sm-1">
 							<button type="submit" class="btn btn-primary">Search</button>
 
 						</div>
@@ -157,13 +171,38 @@
 					String type = request.getParameter("type");
 					String location = request.getParameter("location");
 					String company = request.getParameter("company");
+					
+					String salary=request.getParameter("salary");
+					
+					
+					String s="",d="";
+					
+					
 					if (type != null && location != null && company != null) {
 						rs = ud.filterByTypeAndLocation(type, location, company);
-					} else if (location != null) {
-
-					} else if (company != null) {
-
-					} else{
+					}
+					if(salary!=null){
+						System.out.println(salary);
+						
+						if(salary.equals("5k-10k")){
+							s="5000";
+							d="10000";
+						}else if(salary.equals("10k-40k")){
+							s="10000";
+							d="40000";
+						}
+						else if(salary.equals("40k-60k")){
+							s="40000";
+							d="60000";
+						}
+						else if(salary.equals("60k-100k")){
+							s="60000";
+							d="100000";
+						}
+						System.out.println(s+" "+d);
+						rs=ud.filterBySalary(s, d);
+					}
+					else{
 						rs = ud.getAllJobs();
 					}
 						

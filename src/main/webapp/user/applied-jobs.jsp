@@ -263,7 +263,7 @@ if (u == null) {
 
 
 				</tr>
-									<div class="modal fade" id="largeModal" tabindex="-1">
+					<div class="modal fade" id="largeModal" tabindex="-1">
 						<div class="modal-dialog modal-dialog-centered modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -275,12 +275,13 @@ if (u == null) {
 
 									<div id="steps">
 										<div class="step active" data-desc="Application Submitted">1</div>
+										
 										<%
-										if (rs.getString(8).equals("Yes")&&rs.getString(10).equals("Yes")&&rs.getString(11).equals("Yes")) {
+										//System.out.println(rs.getString(8));
+										if (rs.getString(8).equals("Yes")) {
 										%>
 										<div class="step active" data-desc="Resume Shortlisted">2</div>
-										<div class="step active" data-desc="Aptitude Passed">3</div>
-										<div class="step active" data-desc="Interview Call">4</div>
+										
 										
 										<%
 										} else {
@@ -296,23 +297,23 @@ if (u == null) {
 										<%
 										} else {
 										%>
-										<div class="step " data-desc="Aptitude Passed">3</div>
+										<div class="step" data-desc="Aptitude Passed">3</div>
 										<%
 										}
 										%>
 										<%
 										if (rs.getString(11).equals("Yes")) {
 										%>
-										<div class="step active " data-desc="Interview Call">4</div>
+										<div class="step active" data-desc="Interview Call">4</div>
 										<%
 										} else {
 										%>
-										<div class="step  " data-desc="Interview Call">4</div>
+										<div class="step " data-desc="Interview Call">4</div>
 										<%
 										}
 										%>
 
-</div>
+
 
 									</div>
 

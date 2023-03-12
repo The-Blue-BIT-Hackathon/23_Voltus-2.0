@@ -194,12 +194,12 @@ $(document).ready(function(){
               
               <div class="col-md-7">
                 <div class="card-body">
-                  <h5 class="card-title">Ms. Leela Loola</h5>
-                  <p class="card-text">Clients : 345</p>
-                  <p class="card-text">Year of Experience : 3 Years</p>
-                  <p class="card-text">Domain : Frontend, Database</p>
+                  <h5 class="card-title">Ms. John</h5>
+                  <p class="card-text">Clients : 35</p>
+                  <p class="card-text">Year of Experience : 7 Years</p>
+                  <p class="card-text">Domain : Backend, Database</p>
                   <div class="d-flex justify-content-center">
-                  	<button type="button" class="btn btn-primary m-3">Message</button>
+                  	<button type="button" class="btn btn-primary m-3"data-bs-toggle="modal" data-bs-target="#verticalycentered">Message</button>
                   	<button type="button" class="btn btn-primary m-3">Meeting</button>
                   </div>
                 </div>
@@ -227,12 +227,12 @@ $(document).ready(function(){
               
               <div class="col-md-7">
                 <div class="card-body">
-                  <h5 class="card-title">Ms. Leela Loola</h5>
-                  <p class="card-text">Clients : 345</p>
-                  <p class="card-text">Year of Experience : 3 Years</p>
-                  <p class="card-text">Domain : Frontend, Database</p>
+                  <h5 class="card-title">Ms. Jenny</h5>
+                  <p class="card-text">Clients : 225</p>
+                  <p class="card-text">Year of Experience : 2 Years</p>
+                  <p class="card-text">Domain : Blockchain</p>
                   <div class="d-flex justify-content-center">
-                  	<button type="button" class="btn btn-primary m-3">Message</button>
+                  	<button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#verticalycentered">Message</button>
                   	<button type="button" class="btn btn-primary m-3">Meeting</button>
                   </div>
                 </div>
@@ -261,12 +261,12 @@ $(document).ready(function(){
               
               <div class="col-md-7">
                 <div class="card-body">
-                  <h5 class="card-title">Ms. Leela Loola</h5>
-                  <p class="card-text">Clients : 345</p>
-                  <p class="card-text">Year of Experience : 3 Years</p>
-                  <p class="card-text">Domain : Frontend, Database</p>
+                  <h5 class="card-title">Ms. Saurabh</h5>
+                  <p class="card-text">Clients : 35</p>
+                  <p class="card-text">Year of Experience : 2 Years</p>
+                  <p class="card-text">Domain : Web Developer, Database</p>
                   <div class="d-flex justify-content-center">
-                  	<button type="button" class="btn btn-primary m-3">Message</button>
+                  	<button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#verticalycentered">Message</button>
                   	<button type="button" class="btn btn-primary m-3">Meeting</button>
                   </div>
                 </div>

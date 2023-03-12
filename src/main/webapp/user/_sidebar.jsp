@@ -61,11 +61,20 @@
       </li><!-- End F.A.Q Page Nav -->
 
 <li class="nav-item">
-        <a class="nav-link collapsed" href="take-exam.jsp">
+        <a class="nav-link collapsed" target="_blank" href="demo-apti.jsp">
           <i class="bi bi-file-earmark-code"></i>
-          <span>Take Aptitude</span>
+          <span>Demo Aptitude</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
+      
+      
+<li class="nav-item">
+        <a class="nav-link collapsed" href="take-exam.jsp">
+          <i class="bi bi-file-earmark-code"></i>
+          <span>Screening Exam</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+      
        <li class="nav-item">
         <a class="nav-link collapsed" href="learning-resources.jsp">
           <i class="bi bi-file-earmark-code"></i>
@@ -76,6 +85,18 @@
         <a class="nav-link collapsed" href="skill-assesment.jsp">
           <i class="bi bi-file-earmark-code"></i>
           <span>Skill Assesment</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="guidance.jsp">
+          <i class="bi bi-file-earmark-code"></i>
+          <span>Talk With Experts</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="plans.jsp">
+          <i class="bi bi-file-earmark-code"></i>
+          <span>Premium Plans</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
       <li class="nav-item">

@@ -47,14 +47,24 @@
           <span>Post a Job</span>
         </a>
       </li><!-- End Profile Page Nav -->
-
+<li class="nav-item">
+        <a class="nav-link collapsed" href="display-jobs.jsp">
+          <i class="bi bi-person"></i>
+          <span>Posted Jobs</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
  <li class="nav-item">
         <a class="nav-link collapsed" href="applied-candidates.jsp">
           <i class="bi bi-file-earmark-code"></i>
           <span>Applied Candidates</span>
         </a>
       </li>
-      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="job-post-nonit.jsp">
+          <i class="bi bi-person"></i>
+          <span>Post Non-It Job</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="">

@@ -158,8 +158,7 @@ var count=0;
 	z-index: -1;
 }
 
-<
-style>.quiz-container {
+.quiz-container {
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);

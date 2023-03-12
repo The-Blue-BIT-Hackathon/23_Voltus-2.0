@@ -14,7 +14,7 @@ public class sendHtmlMail
      // String to="pranavkulkarni1110@gmail.com";//change accordingly  
       final String user = "erp.system1010@gmail.com";
 
-		final String password = "fkglfafmbpchsxqj";//Erp@2022
+		final String password = "vvtnvgsoofootytl";//Erp@2022
   
       Properties props = System.getProperties();  
       props.setProperty("mail.smtp.host",host ); 

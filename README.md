@@ -1,4 +1,4 @@
-# 23_Voltus-2.0
+# WorkConnect
 
 A project to tackle unemployment. Built under 24 hours in The-Blue-BIT Hackathon '23. By Team Voltus 2.0.
 
@@ -34,4 +34,39 @@ You can download them from the official website:
 	`Right click on project name > Properties > Java Build Path > Libraries > Add External JARs > Attach Ojdbc14.jar file from the oracleexe folder at C Drive > Click Apply & Close` <br>
 5. Change Database username & password in DBConnection.java file at "23_Voltus-2.0\src\main\java\com\job\DAO\DBConnection.java" <br><br>
 	`jdbc:oracle:thin:@localhost:1521:xe", "your_username", "your_password`
-6. Add Apache Tomcat Server to your project <br><br>
+6. Add Apache Tomcat Server into Eclipse IDE <br><br>
+	Extract the zip file downloaded from Tomcat's official website.<br>
+	`Go to Eclipse IDE > Windows > Show View > Servers > Create new server > Select Apache and its Tomcat version > Click next > Browse Tomcat installation directory > Select path as C:\Program Files\Apache Software Foundation\bin > Click Finish` <br>
+7. ADD Apache Tomcat Server to your project <br><br>
+	`Right click on project name > Properties > Server > Select existing Tomcat Server v8.5 > Click Apply & close`
+8. Run all the Database queries into Oracle DB <br><br>
+	`Go to db.sql file > Create tables in Oracle > Just copy paste those queries > Create sequences > trigger the tables`<br>
+9. Open index.jsp from \src\main\webapp\index.jsp <br><br>
+	`Right click on index.jsp > Run as > 1 Run on Server > Select Existing Server > Tomcat v8.5 Server > Click Finish` <br>
+	After finishing server startup, our webpage will get loaded into default web browser and then you can start evaluating our project. <br>
+## 🟡Built with
+
+1. Frontend:  HTML, CSS, JavaScript, Bootstrap and JQuery. 
+
+2. Backend: Java Server Pages (JSP)
+
+3. Database: Oracle 10g Express Edition
+
+4. Code editor: Eclipse IDE 2022-12 EE
+
+5. Designing tool: Figma
+
+## 🟡Modules
+
+➡️`1. User Module`: WorkConnect provides every individual a dashboard with many functionalities included. The person can search for a a job, apply for one, create customized resume and many more. <br>
+➡️`2. Admin Module`: WorkConnect provides an admin  dashboard which helps an admin to manage  the main two bodies that is users and recruiters and also it provides a space to post a non IT jobs.<br>
+➡️`3. Recruiter Module`: WorkConnect provides every recruiter a dashboard with rich features like posting a job, checking the applications, shortlisting the candidates and other. 
+
+## 🟡Features
+#️⃣`1. Job Listing`: The platform will offer a comprehensive list of job openings in various industries and
+locations. Users will be able to search and filter job listings based on their preferred job title,
+location, and salary range.<br><br>
+#️⃣`2. Application Tracking`: Users will be able to see which jobs they have applied for, the status of each application, and
+receive reminders on follow-up tasks. <br><br>
+#️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews.
+

@@ -8,6 +8,11 @@ Workconnect is a Web based application or online platform that aims to address t
 ## 🟡PowerPoint Link
 [Canva](https://www.canva.com/design/DAFbjHdF9bA/xNVc6JQqqGxKA_nvmlRBYw/view?utm_content=DAFbjHdF9bA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+## 🚀 Team
+- [Mayuri Narute](https://github.com/MayuriNarute)
+- [Pranav Kulkarni](https://github.com/pranavkulkarni2905)
+- [Saurabh Asnare](https://github.com/saurabhasnare)
+- [Ritish Shelke](https://github.com/Ritishshelke007)
 
 ## 🟡Getting Started
 
@@ -48,25 +53,38 @@ You can download them from the official website:
 
 1. Frontend:  HTML, CSS, JavaScript, Bootstrap and JQuery. 
 
-2. Backend: Java Server Pages (JSP)
+2. Backend: Java Server Pages (JSP),Web Servlets
 
 3. Database: Oracle 10g Express Edition
 
-4. Code editor: Eclipse IDE 2022-12 EE
+4. Code editor: Eclipse IDE 2022-12 EE , Tomcat Server
 
 5. Designing tool: Figma
 
 ## 🟡Modules
 
-➡️`1. User Module`: WorkConnect provides every individual a dashboard with many functionalities included. The person can search for a a job, apply for one, create customized resume and many more. <br>
-➡️`2. Admin Module`: WorkConnect provides an admin  dashboard which helps an admin to manage  the main two bodies that is users and recruiters and also it provides a space to post a non IT jobs.<br>
-➡️`3. Recruiter Module`: WorkConnect provides every recruiter a dashboard with rich features like posting a job, checking the applications, shortlisting the candidates and other. 
+➡️`1. User Module`: WorkConnect provides every individual a dashboard with many functionalities included. The person can search for a a job, apply for one, create customized resume and many more. <br><br>
+➡️`2. Admin Module`: WorkConnect provides an admin  dashboard which helps an admin to manage  the main two bodies that is users and recruiters and also it provides a space to post a non IT jobs.<br><br>
+➡️`3. Recruiter Module`: WorkConnect provides every recruiter a dashboard with rich features like posting a job, checking the applications, shortlisting the candidates and other. <br>
 
 ## 🟡Features
 #️⃣`1. Job Listing`: The platform will offer a comprehensive list of job openings in various industries and
 locations. Users will be able to search and filter job listings based on their preferred job title,
-location, and salary range.<br><br>
+location, and salary range. Both IT and Non IT jobs are listed based on the skills and preference of user. <br><br>
 #️⃣`2. Application Tracking`: Users will be able to see which jobs they have applied for, the status of each application, and
 receive reminders on follow-up tasks. <br><br>
-#️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews.
+#️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews.<br><br>
+#️⃣`4. Expert Advice or Guidance`: Users will be able to interact with the experts verified by workconnect. Different purchase plans are also available for users. User can get in touch with the expert via chat or meeting call. <br><br>
+
+## 🟡Main Features
+- Responsive Web Design
+- Professional Resume Builder
+- Application Tracking
+- Interview Preparation
+- Filters Jobs by location , salary , job type
+- Job Post Alert/Notification Through Email
+- Email Verification
+- Mock Aptitude Tests
+- Screening Exam With Audio and video AI proctoring <br><br>
+
 

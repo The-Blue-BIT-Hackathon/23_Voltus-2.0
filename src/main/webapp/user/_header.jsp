@@ -1,3 +1,5 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.job.DAO.UserDAO"%>
 <%@page import="com.job.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -48,6 +50,7 @@ if (u1 == null) {
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
+           
             <span class="badge bg-primary badge-number">4</span>
           </a><!-- End Notification Icon -->
 
@@ -60,60 +63,37 @@ if (u1 == null) {
               <hr class="dropdown-divider">
             </li>
 
-            <li class="notification-item">
-              <i class="bi bi-exclamation-circle text-warning"></i>
+			
+			<%
+			 ServletContext s1 = request.getServletContext();
+            User u2 = (User) s1.getAttribute("user-login-success-context");
+            
+           	UserDAO ud1=new UserDAO();
+           	ResultSet rs1=ud1.getNotificationByUserId(u2.getUser_id());
+          
+           	while(rs1.next()){
+           		%>
+           		<li class="notification-item">
+              <i class="bi bi-exclamation-circle text-success"></i>
               <div>
-                <h4>Lorem Ipsum</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>30 min. ago</p>
+                <h4>Webmax Solution</h4>
+                <p><%=rs1.getString(3)%></p>
+                
               </div>
             </li>
 
             <li>
               <hr class="dropdown-divider">
             </li>
+           		<%
+           		
+           	}
+            
+			%>
 
-            <li class="notification-item">
-              <i class="bi bi-x-circle text-danger"></i>
-              <div>
-                <h4>Atque rerum nesciunt</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>1 hr. ago</p>
-              </div>
-            </li>
+            
 
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-check-circle text-success"></i>
-              <div>
-                <h4>Sit rerum fuga</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>2 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-info-circle text-primary"></i>
-              <div>
-                <h4>Dicta reprehenderit</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>4 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-footer">
-              <a href="#">Show all notifications</a>
-            </li>
+            
 
           </ul><!-- End Notification Dropdown Items -->
 
@@ -135,6 +115,7 @@ if (u1 == null) {
               <hr class="dropdown-divider">
             </li>
 
+
             <li class="message-item">
               <a href="#">
                 <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
@@ -149,33 +130,7 @@ if (u1 == null) {
               <hr class="dropdown-divider">
             </li>
 
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+            
 
             <li class="dropdown-footer">
               <a href="#">Show all messages</a>
@@ -208,8 +163,8 @@ if (u1 == null) {
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+           
+              <h6> <i class="bi bi-person"></i>&nbsp;<%=u1.getFirst_name() %>&nbsp;<%=u1.getLast_name() %></h6>
             </li>
             <li>
               <hr class="dropdown-divider">

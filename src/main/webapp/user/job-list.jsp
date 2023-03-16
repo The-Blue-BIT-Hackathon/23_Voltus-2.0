@@ -229,7 +229,9 @@
 									<h5 class="card-title"><%=rs2.getString(5)%></h5>
 									<p class="card-text"><%=rs.getString(4)%></p>
 									<p class="card-text">
-										<span><i class="bx bxs-map"></i></span><span><%=rs.getString(8)%></span>
+										<span><i class="bx bxs-map"></i></span><span><%=rs.getString(7)%></span>
+								<span><i class="bx bxs-badge-dollar"></i></span><span><%=rs.getString(8)%></span>
+										
 										<span class="p-1"><i class="bx bx-time"></i></span> <span><%=rs.getString(5)%></span><span
 											class="p-1"><i class="bx bxs-calendar"></i></span><span
 											class="p-1"><%=rs.getString(9)%></span>

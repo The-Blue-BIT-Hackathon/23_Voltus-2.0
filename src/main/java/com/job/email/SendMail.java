@@ -58,7 +58,7 @@ public class SendMail {
 
 		final String from = "erp.system1010@gmail.com";
 
-		final String pass = "dkithknujdsuvoss";//Erp@2022
+		final String pass = "vvtnvgsoofootytl";//Erp@2022
 
 		// Defining the gmail host
 

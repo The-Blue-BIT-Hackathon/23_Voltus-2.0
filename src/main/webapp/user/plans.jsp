@@ -86,9 +86,9 @@ $(document).ready(function(){
     <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Free</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Free Access</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">Free  $0</h5>
+              <h6 class="card-subtitle mb-2 text-muted">FREE ACCESS</h6>
+              <p class="card-text"> The Free license allows you to customize, filter various jobs according to your area of interest & provides you the material for Interview Preparation.</p>
               <p class="card-text"><a href="#" class="btn btn-primary disabled">Buy Now</a></p>
               
             </div>
@@ -98,9 +98,9 @@ $(document).ready(function(){
       <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Pro</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">Pro $29 /month</h5>
+              <h6 class="card-subtitle mb-2 text-muted">PRO PLAN</h6>
+              <p class="card-text"> The Pro license allows you to see your profile views and Job Apply for other cities that are outside your state. It also provides you the Resume review score for your resume. </p>
               <p class="card-text"><a href="#" class="btn btn-primary">Buy Now</a></p>
               
             </div>
@@ -110,9 +110,9 @@ $(document).ready(function(){
       <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Premium</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">Premium $50 /month</h5>
+              <h6 class="card-subtitle mb-2 text-muted">PREMIUM PLAN</h6>
+              <p class="card-text"> The Premium license allows you to arrange meetings with top intelligent industry experts for your interview preparation & guidance.</p>
               <p class="card-text"><a href="#" class="btn btn-primary">Buy Now</a></p>
               
             </div>

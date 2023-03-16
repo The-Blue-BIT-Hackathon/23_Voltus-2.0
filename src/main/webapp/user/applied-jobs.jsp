@@ -258,9 +258,9 @@ if (u == null) {
 
 					<td><%=rs.getString(12)%></td>
 					
-					<td><button type="button" class="btn btn-primary"
+					<td><button type="button" onclick="location.href='tracking.jsp?appid=<%=rs.getInt(1) %>&userid=<%=rs.getInt(3) %>'" class="btn btn-primary"
 							data-bs-toggle="modal" data-bs-target="#largeModal">
-							Track</button></td>
+							Track</button></a></td>
 
 
 
@@ -288,46 +288,11 @@ if (u == null) {
 			</tfoot>
 		</table>
 
-<div class="modal fade" id="largeModal" tabindex="-1">
-						<div class="modal-dialog modal-dialog-centered modal-lg">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title">Application Status</h5>
-									<button type="button" class="btn-close" data-bs-dismiss="modal"
-										aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-
-									<div id="steps">
-										<div class="step active" data-desc="Application Submitted">1</div>
-										
-										
-										<div class="step active" data-desc="Resume Shortlisted">2</div>
-										
-										
-										
-										<div class="step active" data-desc="Aptitude Passed">3</div>
-										
-										<div class="step " data-desc="Interview Call">4</div>
-										
-
-
-
-									</div>
-
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-bs-dismiss="modal">Close</button>
-
-								</div>
-							</div>
-						</div>
-					</div>
 		<!-- End Vertically centered Modal-->
 
 	</main>
 	<!-- End #main -->
+	
 
 	<!-- ======= Footer ======= -->
 	<footer id="footer" class="footer">

@@ -218,3 +218,22 @@ begin
 select non_it_job_post_seq.nextval into :new.job_id from dual;
 end;
 ======================================
+7. Notification
+
+
+create table notification(
+    userid number(10),
+    notify_id number(10),
+    msg varchar2(4000)
+);
+create sequence seq_not
+start with 1
+increment by 1;
+
+create or replace trigger trig_not
+before insert on notification
+for each row
+begin
+select seq_not.nextval into :new.notify_id from dual;
+end;
+======================================

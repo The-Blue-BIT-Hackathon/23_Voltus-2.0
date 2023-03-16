@@ -13,7 +13,7 @@ import com.job.model.UserResume;
 public class UserDAO {
 
 	Connection con = null;
-	PreparedStatement ps = null;
+	PreparedStatement ps = null,ps1=null,ps2=null;
 
 	public int registerUser(String username, String email, String password, String phone) {
 		int i = 0;
@@ -57,6 +57,20 @@ public class UserDAO {
 		ResultSet rs = null;
 		try {
 			ps = con.prepareStatement("select * from job_user where user_id=?");
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
+	public ResultSet getNotificationByUserId(int id) {
+		con = DBConnection.getConnection();
+		ResultSet rs = null;
+		try {
+			ps = con.prepareStatement("select * from notification where userid=?");
 			ps.setInt(1, id);
 			rs = ps.executeQuery();
 		} catch (SQLException e) {
@@ -571,15 +585,49 @@ public ResultSet filterBySalary(String s,String d) {
 
 		con = DBConnection.getConnection();
 		try {
-			ps = con.prepareStatement("update job_apply set resume_status='Yes' where user_id=? and app_id=?");
+			ps = con.prepareStatement("update job_apply set resume_status='Yes',flag=1 where user_id=? and app_id=?");
+			ps1 = con.prepareStatement("select * from job_user where user_id=?");
 			ps.setInt(1, userid);
 			ps.setInt(2, jobid);
+			
+			ps1.setInt(1, userid);
+			
+			ResultSet rs=ps1.executeQuery();
+			if(rs.next()) {
+				String email=rs.getString(10);
+				String uname=rs.getString(2);
+				
+				com.job.email.sendHtmlMail sm = new com.job.email.sendHtmlMail();
+				String sub = " Congratulations ! Your Application is one step ahead. ";
+				String msg = "<div class=\"card\" style =\"width:100%; height:100%; margin-top: 50px;margin-left:10px; background-color: black;\">\r\n"
+						+ "    <header class=\"header\" style=\"background-color: black;\">\r\n"
+						+ "   <img src=\"https://media.istockphoto.com/id/1345741261/photo/trophy-cup-with-a-star-on-blue-background.jpg?b=1&s=170667a&w=0&k=20&c=kAi4FpbSuzWQE_TGRn4L4rVpfV40gKZyp2Zgg9vjVCk=\" height=\"200px\" width=\"50%\" style=\"margin-top: 15px; margin-left: 25%; color: black;align:center;\">\r\n"
+						+ "   </header>\r\n" + "     \r\n"
+						+ "      <div class=\"cotainer\" style=\"height: 620px;background-color:black;color:white;\">\r\n"
+						+ "      <p style=\"margin-left: 25%;\"><br>Hello, "+uname
+						+"<br> Greeting from WorkConnect Job Portal<br><br>Glad to inform you that your application is shortlisted for resume.Now you can go ahead for Screening Exam.</p>\r\n"
+						+ "\r\n"
+						+ "     <p style=\"margin-left: 25%;\">All The Best !!</p></a><br>\r\n"
+						
+						+ "         <p style=\"margin-left: 25%;\"> If you have any concerns ,please contact us at<br><br>\r\n"
+						+ "          workconnect@gmail.com<br><br></p><p style=\"margin-left: 25%;\">Thank you for Registering on WorkConnect Portal.<br>If you beleive you've received this messsage in error,<br>we apologize-feel free to ignore it.<br><br>\r\n"
+						+ "\r\n" + "          Thanks,<br>\r\n"
+						+ "          Team WorkConnect Portal</p>\r\n" + "      </p>\r\n"
+						+ "      </div>\r\n" + "    </div>";
+		
+				sm.sendMail(email, sub, msg);
+			}
+			ps2 = con.prepareStatement("insert into notification(msg,userid) values (?,?)");
+			ps2.setString(1, "Application Status: Resume Shortlisted");
+			ps2.setInt(2, userid);
+			int i1=ps2.executeUpdate();
 			i = ps.executeUpdate();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return i;
 
 	}
@@ -589,9 +637,42 @@ public ResultSet filterBySalary(String s,String d) {
 
 		con = DBConnection.getConnection();
 		try {
-			ps = con.prepareStatement("update job_apply set apti_status='Yes' where user_id=? and app_id=?");
+			ps = con.prepareStatement("update job_apply set apti_status='Yes',flag=2 where user_id=? and app_id=?");
+			ps1 = con.prepareStatement("select * from job_user where user_id=?");
 			ps.setInt(1, userid);
 			ps.setInt(2, appid);
+			
+			ps1.setInt(1, userid);
+			
+			ResultSet rs=ps1.executeQuery();
+			if(rs.next()) {
+				String email=rs.getString(10);
+				String uname=rs.getString(2);
+				
+				com.job.email.sendHtmlMail sm = new com.job.email.sendHtmlMail();
+				String sub = " Congratulations ! Your Application is one step ahead. ";
+				String msg = "<div class=\"card\" style =\"width:100%; height:100%; margin-top: 50px;margin-left:10px; background-color: black;\">\r\n"
+						+ "    <header class=\"header\" style=\"background-color: black;\">\r\n"
+						+ "   <img src=\"https://media.istockphoto.com/id/1345741261/photo/trophy-cup-with-a-star-on-blue-background.jpg?b=1&s=170667a&w=0&k=20&c=kAi4FpbSuzWQE_TGRn4L4rVpfV40gKZyp2Zgg9vjVCk=\" height=\"200px\" width=\"50%\" style=\"margin-top: 15px; margin-left: 25%; color: black;align:center;\">\r\n"
+						+ "   </header>\r\n" + "     \r\n"
+						+ "      <div class=\"cotainer\" style=\"height: 620px;background-color:black;color:white;\">\r\n"
+						+ "      <p style=\"margin-left: 25%;\"><br>Hello, "+uname
+						+"<br> Greeting from WorkConnect Job Portal<br><br>Glad to inform you that your application is shortlisted for Aptitude Test.Now you can go ahead for Interview Call.</p>\r\n"
+						+ "\r\n"
+						+ "     <p style=\"margin-left: 25%;\">All The Best !!</p></a><br>\r\n"
+						
+						+ "         <p style=\"margin-left: 25%;\"> If you have any concerns ,please contact us at<br><br>\r\n"
+						+ "          workconnect@gmail.com<br><br></p><p style=\"margin-left: 25%;\">Thank you for Registering on WorkConnect Portal.<br>If you beleive you've received this messsage in error,<br>we apologize-feel free to ignore it.<br><br>\r\n"
+						+ "\r\n" + "          Thanks,<br>\r\n"
+						+ "          Team WorkConnect Portal</p>\r\n" + "      </p>\r\n"
+						+ "      </div>\r\n" + "    </div>";
+		
+				sm.sendMail(email, sub, msg);
+			}
+			ps2 = con.prepareStatement("insert into notification(msg,userid) values (?,?)");
+			ps2.setString(1, "Application Status: Aptitude Passed");
+			ps2.setInt(2, userid);
+			int i1=ps2.executeUpdate();
 			i = ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -606,9 +687,42 @@ public ResultSet filterBySalary(String s,String d) {
 
 		con = DBConnection.getConnection();
 		try {
-			ps = con.prepareStatement("update job_apply set interview_status='Yes' where user_id=? and app_id=?");
+			ps = con.prepareStatement("update job_apply set interview_status='Yes',flag=3 where user_id=? and app_id=?");
+			ps1 = con.prepareStatement("select * from job_user where user_id=?");
 			ps.setInt(1, userid);
 			ps.setInt(2, appid);
+ps1.setInt(1, userid);
+			
+			ResultSet rs=ps1.executeQuery();
+			if(rs.next()) {
+				String email=rs.getString(10);
+				String uname=rs.getString(2);
+				
+				com.job.email.sendHtmlMail sm = new com.job.email.sendHtmlMail();
+				String sub = " Congratulations ! Your Application is one step ahead. ";
+				String msg = "<div class=\"card\" style =\"width:100%; height:100%; margin-top: 50px;margin-left:10px; background-color: black;\">\r\n"
+						+ "    <header class=\"header\" style=\"background-color: black;\">\r\n"
+						+ "   <img src=\"https://media.istockphoto.com/id/1345741261/photo/trophy-cup-with-a-star-on-blue-background.jpg?b=1&s=170667a&w=0&k=20&c=kAi4FpbSuzWQE_TGRn4L4rVpfV40gKZyp2Zgg9vjVCk=\" height=\"200px\" width=\"50%\" style=\"margin-top: 15px; margin-left: 25%; color: black;align:center;\">\r\n"
+						+ "   </header>\r\n" + "     \r\n"
+						+ "      <div class=\"cotainer\" style=\"height: 620px;background-color:black;color:white;\">\r\n"
+						+ "      <p style=\"margin-left: 25%;\"><br>Hello, "+uname
+						+"<br> Greeting from WorkConnect Job Portal<br><br>Glad to inform you that You have cracked the interview successfully. Recruiter will contact you soon for further process.Get in touch.</p>\r\n"
+						+ "\r\n"
+						+ "     <p style=\"margin-left: 25%;\">All The Best !!</p></a><br>\r\n"
+						
+						+ "         <p style=\"margin-left: 25%;\"> If you have any concerns ,please contact us at<br><br>\r\n"
+						+ "          workconnect@gmail.com<br><br></p><p style=\"margin-left: 25%;\">Thank you for Registering on WorkConnect Portal.<br>If you beleive you've received this messsage in error,<br>we apologize-feel free to ignore it.<br><br>\r\n"
+						+ "\r\n" + "          Thanks,<br>\r\n"
+						+ "          Team WorkConnect Portal</p>\r\n" + "      </p>\r\n"
+						+ "      </div>\r\n" + "    </div>";
+		
+				sm.sendMail(email, sub, msg);
+			}
+			ps2 = con.prepareStatement("insert into notification(msg,userid) values (?,?)");
+			ps2.setString(1, "Application Status: Interview Call");
+			int i1=ps2.executeUpdate();
+			ps2.setInt(2, userid);
+			
 			i = ps.executeUpdate();
 
 		} catch (SQLException e) {
@@ -625,10 +739,48 @@ public ResultSet filterBySalary(String s,String d) {
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement(
-					"update job_apply set resume_status='No', apti_status='No',interview_status='No' where user_id=? and app_id=?");
+					"update job_apply set resume_status='No', apti_status='No',interview_status='No',flag=4 where user_id=? and app_id=?");
+			ps1 = con.prepareStatement("select * from job_user where user_id=?");
 			ps.setInt(1, userid);
 			ps.setInt(2, appid);
+ps1.setInt(1, userid);
+			
+			ResultSet rs=ps1.executeQuery();
+			if(rs.next()) {
+				String email=rs.getString(10);
+				String uname=rs.getString(2);
+				
+				com.job.email.sendHtmlMail sm = new com.job.email.sendHtmlMail();
+				String sub = " Thanks for Applying ! ";
+				String msg = "<div class=\"card\" style =\"width:100%; height:100%; margin-top: 50px;margin-left:10px; background-color: black;\">\r\n"
+						+ "    <header class=\"header\" style=\"background-color: black;\">\r\n"
+						+ "   \r\n"
+						+ "   </header>\r\n" + "     \r\n"
+						+ "      <div class=\"cotainer\" style=\"height: 620px;background-color:black;color:white;\">\r\n"
+						+ "      <p style=\"margin-left: 25%;\"><br>Hello, "+uname
+						+"<br> Thanks for applying to WorkConnect! There are a ton of great companies out there, so we appreciate your interest in joining our team.\r\n"
+						+ "\r\n"
+						+ "While we’re not able to reach out to every applicant, our recruiting team will contact you if your skills and experience are a strong match for the role. In the meantime, join the conversation about job opportunities and life at WorkConnect on our LinkedIn page.\r\n"
+						+ "\r\n"
+						+ "We appreciate your interest in joining us.</p>\r\n"
+						+ "\r\n"
+						+ "     <p style=\"margin-left: 25%;\">All The Best !!</p></a><br>\r\n"
+						
+						+ "         <p style=\"margin-left: 25%;\"> If you have any concerns ,please contact us at<br><br>\r\n"
+						+ "          workconnect@gmail.com<br><br></p><p style=\"margin-left: 25%;\">Thank you for Registering on WorkConnect Portal.<br>If you beleive you've received this messsage in error,<br>we apologize-feel free to ignore it.<br><br>\r\n"
+						+ "\r\n" + "          Thanks,<br>\r\n"
+						+ "          Team WorkConnect Portal</p>\r\n" + "      </p>\r\n"
+						+ "      </div>\r\n" + "    </div>";
+		
+				sm.sendMail(email, sub, msg);
+			}
+			ps2 = con.prepareStatement("insert into notification(msg,userid) values (?,?)");
+			ps2.setString(1, "Application Status: Rejected");
+			ps2.setInt(2, userid);
+			int i1=ps2.executeUpdate();
+			
 			i = ps.executeUpdate();
+			
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -677,6 +829,41 @@ public ResultSet filterBySalary(String s,String d) {
 
 	}
 
+	public ResultSet getStatusById(int id,int userid) {
+
+		ResultSet rs = null;
+
+		con = DBConnection.getConnection();
+		try {
+			ps = con.prepareStatement("select * from job_apply where user_id=? and app_id=?");
+			ps.setInt(1, userid);
+			ps.setInt(2, id);
+			rs = ps.executeQuery();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+
+	}
+	public ResultSet getNotifyCountById(int userid) {
+
+		ResultSet rs = null;
+
+		con = DBConnection.getConnection();
+		try {
+			ps = con.prepareStatement("select COUNT(msg) from notification where user_id=?");
+			ps.setInt(1, userid);
+			rs = ps.executeQuery();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+
+	}
 	public ResultSet getResumeFileNameByUserId(int id) {
 
 		ResultSet rs = null;

@@ -84,6 +84,7 @@ if (u == null) {
 		UserDAO ud1 = new UserDAO();
 
 		int id = Integer.parseInt(request.getParameter("id"));
+		int flag = Integer.parseInt(request.getParameter("flag"));
 		int appid = Integer.parseInt(request.getParameter("appid"));
 		String resume_status = request.getParameter("resume-status");
 		String apti_status = request.getParameter("apti-status");
@@ -96,13 +97,13 @@ if (u == null) {
 		//if(rs2.next()){
 			//appid=rs2.getInt(1);
 	//	}
-		if (resume_status != null) {
+		if (resume_status != null && flag!=1) {
 			i1 = ud1.updateShortlistResumeStatus(id,appid);
-		} else if (apti_status != null) {
+		} else if (apti_status != null && flag!=2) {
 			i1 = ud1.updateShortlistAptiStatus(id,appid);
-		} else if (interview_status != null) {
+		} else if (interview_status != null && flag!=3) {
 			i1 = ud1.updateShortlistInterviewStatus(id,appid);
-		} else {
+		} else if(flag!=4){
 			i1 = ud1.updateShortlistRejectStatus(id,appid);
 		}
 	} catch (Exception e) {
@@ -212,7 +213,7 @@ if (u == null) {
 						if (rs.getString(8)==null) {
 						%>  
 						<a
-						href="applied-candidates.jsp?resume-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>"
+						href="applied-candidates.jsp?resume-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>&flag=<%=rs.getInt(14)%>"
 						 class="btn "><i class="bi bi-check-circle"
 							style="color: green"></i> </a>
 						
@@ -235,7 +236,7 @@ if (u == null) {
 						if (rs.getString(10)==null) {
 						%> 
 						<a
-						href="applied-candidates.jsp?apti-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>"
+						href="applied-candidates.jsp?apti-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>&flag=<%=rs.getInt(14)%>"
 						class="btn "><i class="bi bi-check-circle"
 							style="color: green"></i> </a>
 						
@@ -261,7 +262,7 @@ if (u == null) {
 						if (rs.getString(11)==null ) {
 						%> 
 						 <a
-						href="applied-candidates.jsp?interview-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>"
+						href="applied-candidates.jsp?interview-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>&flag=<%=rs.getInt(14)%>"
 						 class="btn "><i class="bi bi-check-circle"
 							style="color: green"></i> </a> 
 						
@@ -283,7 +284,7 @@ if (u == null) {
 					<%
 						if (rs.getString(11)==null) {
 						%> <a
-						href="applied-candidates.jsp?reject=No&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>"
+						href="applied-candidates.jsp?reject=No&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>&flag=<%=rs.getInt(14)%>"
 						 class="btn"><i class="bi bi-question-circle"
 							style="color: red"></i></a> <%
  } else if(rs.getString(8).equals("Yes")&&rs.getString(10).equals("Yes")&&rs.getString(11).equals("Yes")){

@@ -23,8 +23,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -97,33 +97,34 @@
                         <div class="d-flex align-items-center mb-5">
                             <img class="flex-shrink-0 img-fluid border rounded" src="assets/img/com-logo-2.jpg" alt="" style="width: 80px; height: 80px;">
                             <div class="text-start ps-4">
-                                <h3 class="mb-3">Marketing Manager</h3>
-                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>New York, USA</span>
+                                <h3 class="mb-3"> Cipla Ltd</h3>
+                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2">Pune</i></span>
                                 <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
-                                <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>$123 - $456</span>
+                                <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>30,0000</span>
                             </div>
                         </div>
 
                         <div class="mb-5">
                             <h4 class="mb-3">Job description</h4>
-                            <p>Dolor justo tempor duo ipsum accusam rebum gubergren erat. Elitr stet dolor vero clita labore gubergren. Kasd sed ipsum elitr clita rebum ut sea diam tempor. Sadipscing nonumy vero labore invidunt dolor sed, eirmod dolore amet aliquyam consetetur lorem, amet elitr clita et sed consetetur dolore accusam. Vero kasd nonumy justo rebum stet. Ipsum amet sed lorem sea magna. Rebum vero dolores dolores elitr vero dolores magna, stet sea sadipscing stet et. Est voluptua et sanctus at sanctus erat vero sed sed, amet duo no diam clita rebum duo, accusam tempor takimata clita stet nonumy rebum est invidunt stet, dolor.</p>
+                            <p>Meeting Doctors on daily basis to promote our company product as per the company policy.
+Meeting Chemists and stockiest to check the stock availability & collecting order and payments.
+Conduct and participate in various brand promotion activities Viz; CMEs, Conferences, Doctor meet, RTM etc.
+Implement Company's promotional strategies and utilize the promotional inputs as per the Company's guidelines.</p>
                             <h4 class="mb-3">Responsibility</h4>
-                            <p>Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor</p>
+							<p> Candidate will be responsible to promote pharmaceutical products to doctors. To achieve sales target.Meeting with Stockiest make the products availabilityChemist survey for better marketing.Managing the sales & mktg operations with focus sales growth</p>
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Dolor justo tempor duo ipsum accusam</li>
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Elitr stet dolor vero clita labore gubergren</li>
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Rebum vero dolores dolores elitr</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Conducting research and development activities to identify new drugs or improve existing ones.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Testing and analyzing drugs to ensure their safety, efficacy, and quality.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Developing and implementing manufacturing processes for drugs.</li>
                                 <li><i class="fa fa-angle-right text-primary me-2"></i>Est voluptua et sanctus at sanctus erat</li>
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Diam diam stet erat no est est</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Managing clinical trials to test new drugs.</li>
                             </ul>
                             <h4 class="mb-3">Qualifications</h4>
-                            <p>Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor</p>
+                            <p>UG :B.Sc in Biology, Chemistry, B.Pharma in Any Specialization
+							PG :M.Pharma in Any Specialization, MS/M.Sc(Science) in Biology, Chemistry</p>
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Dolor justo tempor duo ipsum accusam</li>
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Elitr stet dolor vero clita labore gubergren</li>
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Rebum vero dolores dolores elitr</li>
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Est voluptua et sanctus at sanctus erat</li>
-                                <li><i class="fa fa-angle-right text-primary me-2"></i>Diam diam stet erat no est est</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>UG :B.Sc in Biology, Chemistry, B.Pharma in Any Specialization</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>PG :M.Pharma in Any Specialization, MS/M.Sc(Science) in Biology, Chemistry</li>
                             </ul>
                         </div>
         
@@ -157,17 +158,17 @@
                     <div class="col-lg-4">
                         <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
                             <h4 class="mb-4">Job Summery</h4>
-                            <p><i class="fa fa-angle-right text-primary me-2"></i>Published On: 01 Jan, 2045</p>
-                            <p><i class="fa fa-angle-right text-primary me-2"></i>Vacancy: 123 Position</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Published On: 02 Jan, 2023</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Vacancy: 12</p>
                             <p><i class="fa fa-angle-right text-primary me-2"></i>Job Nature: Full Time</p>
-                            <p><i class="fa fa-angle-right text-primary me-2"></i>Salary: $123 - $456</p>
-                            <p><i class="fa fa-angle-right text-primary me-2"></i>Location: New York, USA</p>
-                            <p class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Date Line: 01 Jan, 2045</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Salary: 30,000</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Location: Pune</p>
+                            <p class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Dead Line: 01 Jan, 2024</p>
                         </div>
                         <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
                             <h4 class="mb-4">Company Detail</h4>
-                            <p class="m-0">Ipsum dolor ipsum accusam stet et et diam dolores, sed rebum sadipscing elitr vero dolores. Lorem dolore elitr justo et no gubergren sadipscing, ipsum et takimata aliquyam et rebum est ipsum lorem diam. Et lorem magna eirmod est et et sanctus et, kasd clita labore.</p>
-                        </div>
+                            <p class="m-0">Cipla is a leading pharmaceutical from India with presence across the world. It was established in 1935 as Chemical Industrial & Pharmaceutical Laboratories Ltd and changed to its current name in 1984. The company has a vast portfolio with more than 1,500 products in the market.</p>
+                                </div>
                     </div>
                 </div>
             </div>
@@ -244,11 +245,10 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
+    <script src="assets/wow/wow.min.js"></script>
+    <script src="assets/easing/easing.min.js"></script>
+    <script src="assets/waypoints/waypoints.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
     <!-- Template Javascript -->
     <script src="assets/js/main2.js"></script>
 </body>

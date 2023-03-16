@@ -43,7 +43,7 @@ public class JobApplyController extends HttpServlet {
 		String fileName = "wc" + file.getSubmittedFileName();
 		// System.out.println("Selected image file: "+fileName);
 		System.out.println();
-		String uploadPath = "C:/Users/91951/Desktop/FinalBlu-Bit/23_Voltus-2.0/src/main/webapp/resume/" + fileName;
+		String uploadPath = "C:/Users/NCS/eclipse-workspace/Job Searching Platform/src/main/webapp/resume/" + fileName;
 		System.out.println(uploadPath);
 		String ques1 = request.getParameter("ques1");
 		String ques2 = request.getParameter("ques2");

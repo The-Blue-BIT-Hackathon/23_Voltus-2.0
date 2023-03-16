@@ -57,7 +57,7 @@ public class PersonalProfileController extends HttpServlet {
 		imageFileName=fName+lName+"_"+imageFileName;
 		System.out.println("Selected Image File Name : "+imageFileName);
 	
-		String uploadPath="C:/Users/NCS/Desktop/hackthon/Refactor/src/main/webapp/user-images/"+imageFileName;  // upload path where we have to upload our actual image
+		String uploadPath="C:/Users/NCS/eclipse-workspace/Job Searching Platform/src/main/webapp/user-images/"+imageFileName;  // upload path where we have to upload our actual image
 		System.out.println("Upload Path : "+uploadPath);
 	
 		

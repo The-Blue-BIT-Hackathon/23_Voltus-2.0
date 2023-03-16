@@ -491,7 +491,7 @@ public class UserDAO {
 
 		return rs;
 	}
-<<<<<<< HEAD
+
 public ResultSet filterBySalary(String s,String d) {
 		
 		ResultSet rs=null;
@@ -510,9 +510,7 @@ public ResultSet filterBySalary(String s,String d) {
 		
 		return rs;
 	}
-=======
 
->>>>>>> 7375f490b63fa951c4b7bd637e48c68bca1f006c
 	public ResultSet getAllCandidatesById(int id) {
 
 		ResultSet rs = null;

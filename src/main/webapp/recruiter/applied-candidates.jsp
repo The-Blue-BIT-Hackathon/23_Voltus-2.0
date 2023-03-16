@@ -174,7 +174,7 @@ if (u == null) {
 				</tr>
 			</thead>
 			<tbody>
-				<%
+				<%try{
 				UserDAO ud = new UserDAO();
 				ResultSet rs = ud.getAllCandidatesById(u.getRecruiterId());
 				int i = 1;
@@ -206,18 +206,20 @@ if (u == null) {
 						target="_blank" class="btn btn-primary">View</a></td>
 
 					<td><%=rs.getString(12)%></td>
+					
 					<td>
 						<%
-						if (rs.getString(8).equals("No")&&rs.getString(10).equals("No")&&rs.getString(11).equals("No")) {
+						if (rs.getString(8)==null) {
 						%>  
-						<i class="bi bi-question-circle" style="color: red"></i>
-						 <%
- }else if(rs.getString(8)==null||rs.getString(8).equals("No")){
-	 %>
-	 <a
+						<a
 						href="applied-candidates.jsp?resume-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>"
 						 class="btn "><i class="bi bi-check-circle"
 							style="color: green"></i> </a>
+						
+						 <%
+ }else if(rs.getString(8).equals("No")&&rs.getString(10).equals("No")&&rs.getString(11).equals("No")){
+	 %>
+	 <i class="bi bi-question-circle" style="color: red"></i>
 	 <%
 	 
  }
@@ -230,37 +232,43 @@ if (u == null) {
 					
 					<td>
 						<%
-						if (rs.getString(8).equals("No")&&rs.getString(10).equals("No")&&rs.getString(11).equals("No")) {
+						if (rs.getString(10)==null) {
 						%> 
-						<i class="bi bi-question-circle" style="color: red"></i>
-						<%
- } else if(rs.getString(10)==null||rs.getString(10).equals("No")){
-	 %>
-	 <a
+						<a
 						href="applied-candidates.jsp?apti-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>"
 						class="btn "><i class="bi bi-check-circle"
 							style="color: green"></i> </a>
+						
+						<%
+ } else if(rs.getString(8).equals("No")&&rs.getString(10).equals("No")&&rs.getString(11).equals("No")){
+	 %>
+	 <i class="bi bi-question-circle" style="color: red"></i>
 	 <% 
  }
 						else {
- %>  <i class="bi bi-check-circle-fill" style="color: green"></i> <%
+ %>  
+ <i class="bi bi-check-circle-fill" style="color: green"></i>
+  <%
  }
- %> </td>
+ %> 
+</td>
+
  
  
 					<td>
 					
 					<%
-						if (rs.getString(8).equals("No")&&rs.getString(10).equals("No")&&rs.getString(11).equals("No")) {
+						if (rs.getString(11)==null ) {
 						%> 
-						<i class="bi bi-question-circle" style="color: red"></i>
-						<%
- } else if(rs.getString(11)==null ||rs.getString(11).equals("No")){
-	 %>
-	 <a
+						 <a
 						href="applied-candidates.jsp?interview-status=Yes&id=<%=rs.getInt(3)%>&appid=<%=rs.getInt(1) %>"
 						 class="btn "><i class="bi bi-check-circle"
 							style="color: green"></i> </a> 
+						
+						<%
+ } else if(rs.getString(8).equals("No")&&rs.getString(10).equals("No")&&rs.getString(11).equals("No")){
+	 %>
+	<i class="bi bi-question-circle" style="color: red"></i>
 	 <% 
  }
 						else {
@@ -269,6 +277,7 @@ if (u == null) {
  }
  %> 
 					</td>
+					
 					<td>
 					
 					<%
@@ -292,6 +301,9 @@ if (u == null) {
 				<%
 				i++;
 				}
+				}
+				}catch(Exception e){
+					
 				}
 				%>
 

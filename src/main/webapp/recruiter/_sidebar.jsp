@@ -48,7 +48,7 @@
         </a>
       </li><!-- End Profile Page Nav -->
 <li class="nav-item">
-        <a class="nav-link collapsed" href="display-jobs.jsp">
+        <a class="nav-link collapsed" href="posted-jobs.jsp">
           <i class="bi bi-person"></i>
           <span>Posted Jobs</span>
         </a>

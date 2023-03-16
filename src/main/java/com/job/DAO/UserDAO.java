@@ -506,22 +506,22 @@ public class UserDAO {
 		return rs;
 	}
 
-public ResultSet filterBySalary(String s,String d) {
-		
-		ResultSet rs=null;
+	public ResultSet filterBySalary(String s, String d) {
+
+		ResultSet rs = null;
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement("select * from job_post where salary between ? and ?");
 			ps.setString(1, s);
 			ps.setString(2, d);
-			
+
 			rs = ps.executeQuery();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return rs;
 	}
 
@@ -532,6 +532,24 @@ public ResultSet filterBySalary(String s,String d) {
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement("select * from job_apply where recrutier_id=?");
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+
+	}
+
+	public ResultSet getCandidatesByJobId(int id) {
+
+		ResultSet rs = null;
+
+		con = DBConnection.getConnection();
+		try {
+			ps = con.prepareStatement("select * from job_apply where job_id=?");
 			ps.setInt(1, id);
 			rs = ps.executeQuery();
 

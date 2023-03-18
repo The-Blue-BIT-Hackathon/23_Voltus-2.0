@@ -115,7 +115,7 @@ $(document).ready(function(){
                   <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-home" type="button" role="tab" aria-controls="home" aria-selected="true">Description</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#bordered-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Qualification</button>
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#bordered-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Skills,Eligibility,Responsibilities</button>
                 </li>
                 <li class="nav-item" role="presentation">
                   <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bordered-contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Company</button>
@@ -126,7 +126,9 @@ $(document).ready(function(){
                 <%=rs.getString(10) %>
                 </div>
                 <div class="tab-pane fade" id="bordered-profile" role="tabpanel" aria-labelledby="profile-tab">
-				<%=rs.getString(11) %>            
+				<b>Skills :</b><%=rs.getString(11) %>      <br>
+				<b>Eligibility: </b><%=rs.getString(13) %>     <br>
+				<b>Responsibilities: </b><%=rs.getString(14) %> <br>
 				</div>
                 <div class="tab-pane fade" id="bordered-contact" role="tabpanel" aria-labelledby="contact-tab">
 				<%=rsCompany.getString(13) %>            

@@ -60,13 +60,13 @@ public class RecruiterDAO {
 	}
 
 	public int addJob(int recruiterId, String cmpName, String title, String type, String location, String salary,
-			String deadline, String desc, String vacancy, String skills) {
+			String deadline, String desc, String vacancy, String skills,String elg,String res) {
 		int i = 0;
 		Timestamp date = new Timestamp(new Date().getTime());
 		con = DBConnection.getConnection();
 		try {
 			ps = con.prepareStatement(
-					"insert into job_post(recruiter_id,company_name,job_title,jo_type,job_location,job_vaccancy,salary,deadline,job_desc,skill_qualification,posted_date) values(?,?,?,?,?,?,?,?,?,?,?)");
+					"insert into job_post(recruiter_id,company_name,job_title,jo_type,job_location,job_vaccancy,salary,deadline,job_desc,skill_qualification,posted_date,eligibility,responsibilites) values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setInt(1, recruiterId);
 			ps.setString(2, cmpName);
 			ps.setString(3, title);
@@ -78,6 +78,8 @@ public class RecruiterDAO {
 			ps.setString(9, desc);
 			ps.setString(10, skills);
 			ps.setTimestamp(11, date);
+			ps.setString(12, elg);
+			ps.setString(13, res);
 
 			i = ps.executeUpdate();
 		} catch (SQLException e) {

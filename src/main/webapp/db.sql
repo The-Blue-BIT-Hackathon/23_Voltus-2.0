@@ -145,8 +145,14 @@ salary varchar2(4000),
 deadline varchar2(4000),
 job_desc varchar2(4000),
 skill_qualification varchar2(4000),
-posted_date varchar2(4000)
+posted_date varchar2(4000),
+eligibility varchar2(4000),
+responsibilites varchar2(4000)
 );
+
+alter table job_post add eligibility varchar2(4000);
+alter table job_post add responsibilites varchar2(4000);
+
 
 create sequence job_post_seq
 start with 1

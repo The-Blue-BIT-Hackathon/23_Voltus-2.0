@@ -37,6 +37,8 @@ public class JobPostController extends HttpServlet {
 		String desc=request.getParameter("desc");
 		String vacancy=request.getParameter("vacancy");
 		String skills=request.getParameter("skills");
+		String elg=request.getParameter("elg");
+		String res=request.getParameter("res");
 		
 		int recruiterId=Integer.parseInt(request.getParameter("id"));
 		String cmpName=request.getParameter("name");
@@ -51,7 +53,7 @@ public class JobPostController extends HttpServlet {
 
 		
 		RecruiterDAO rd=new RecruiterDAO();
-		int i=rd.addJob(recruiterId,cmpName,title,type,location,salary,deadline,desc,vacancy,skills);
+		int i=rd.addJob(recruiterId,cmpName,title,type,location,salary,deadline,desc,vacancy,skills,elg,res);
 		
 		if(i>0) {
    		 session.setAttribute("job-post-success", true);

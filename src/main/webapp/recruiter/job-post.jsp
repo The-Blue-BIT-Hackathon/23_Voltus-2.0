@@ -183,14 +183,26 @@ $(document).ready(function(){
         </div>
         
         <div class="col-md-6">
+          <label for="inputTitle" class="form-label">Eligibility</label>
+          <input type="text" class="form-control" id="jobTitle" name="elg">
+        </div>
+        
+         <div class="col-md-6">
+          <label for="inputTitle" class="form-label">Skills and Qualification</label>
+          <input type="text" class="form-control" id="jobTitle" name="skills">
+        </div>
+        
+        <div class="col-md-6">
           <label for="inputDesc" class="form-label">Job Description</label>
           <textarea class="form-control" id="jobDesc" style="height: 100px;" name="desc"></textarea>
         </div>
         
          <div class="col-md-6">
-          <label for="inputSkills" class="form-label">Skills and Qualification</label>
-          <textarea class="form-control" id="skills" style="height: 100px;" name="skills"></textarea>
+          <label for="inputSkills" class="form-label">Responsibilities</label>
+          <textarea class="form-control" id="skills" style="height: 100px;" name="res"></textarea>
         </div>
+        
+         
         
 <!-- 
           <div class="col-md-6">

@@ -9,10 +9,10 @@ Workconnect is a Web based application or online platform that aims to address t
 [Canva](https://www.canva.com/design/DAFbjHdF9bA/xNVc6JQqqGxKA_nvmlRBYw/view?utm_content=DAFbjHdF9bA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## 🚀 Team
-- [Mayuri Narute](https://github.com/MayuriNarute)
+- [Arya Janjire](https://github.com/aryajanjire)
 - [Pranav Kulkarni](https://github.com/pranavkulkarni2905)
 - [Saurabh Asnare](https://github.com/saurabhasnare)
-- [Ritish Shelke](https://github.com/Ritishshelke007)
+- [Vinayak Shete](https://github.com/vinayak182002)
 
 ## 🟡Getting Started
 
@@ -74,14 +74,16 @@ location, and salary range. Both IT and Non IT jobs are listed based on the skil
 #️⃣`2. Application Tracking`: Users will be able to see which jobs they have applied for, the status of each application, and
 receive reminders on follow-up tasks. <br><br>
 #️⃣`3. Interview Preparation`: The platform will offer personalized career development resources and tools, including interview coaching, sample aptitude tests with quick result and YouTube videos recommendation for particular job interviews.<br><br>
-#️⃣`4. Expert Advice or Guidance`: Users will be able to interact with the experts verified by workconnect. Different purchase plans are also available for users. User can get in touch with the expert via chat or meeting call. <br><br>
+#️⃣`4. Job Fit Score`: User will be given with a Job Fit Score for every job he/she applies. Requirter can find the best applicant easily using the score.<br><br>
+#️⃣`5. Realtime Job Alerts based on skills`: user will be given with realtime job alerts when candidate posts any job and the skills required for the job matches with candidate skills.<br><br>
+#️⃣`6. Expert Advice or Guidance`: Users will be able to interact with the experts verified by workconnect. Different purchase plans are also available for users. User can get in touch with the expert via chat or meeting call. <br><br>
 
 ## 🟡Main Features
 - Responsive Web Design
 - Professional Resume Builder
 - Application Tracking
 - Interview Preparation
-- Filters Jobs by location , salary , job type
+- Filters Jobs by location , salary , job type,skills
 - Job Post Alert/Notification Through Email
 - Email Verification
 - Mock Aptitude Tests
